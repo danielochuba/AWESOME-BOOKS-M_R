@@ -6,50 +6,53 @@ const addBtn = document.querySelector('.add-btn');
 
 const Books = JSON.parse(localStorage.getItem('books')) || [];
 
-
-addBtn.addEventListener('click', () => {
-    let titleValue = titleInput.value;
-    let authorValue = authorInput.value;
-    let bookID = Books.length;
-    addBook(titleValue, authorValue, bookID);
-});
-
-displayBooks();
-
 function addBook(title, author, id) {
-   let book = {
-        title : title,
-        author: author,
-        ID : id,
-    }
-    Books.push(book);
-    localStorage.setItem('books', JSON.stringify(Books));
-    displayBooks();
+  const book = {
+    title,
+    author,
+    ID: id,
+  };
+  Books.push(book);
+  localStorage.setItem('books', JSON.stringify(Books));
+  // eslint-disable-next-line no-use-before-define
+  displayBooks();
 }
 
 function removeBook(index) {
   Books.splice(index, 1);
   localStorage.setItem('books', JSON.stringify(Books));
+  // eslint-disable-next-line no-use-before-define
   displayBooks();
 }
 
-function displayBooks () {
-    booksContainer.innerHTML = ''; // Clear the books container before rendering new books
-    Books.forEach( (book) => {
-        booksContainer.innerHTML += `
+function displayBooks() {
+  booksContainer.innerHTML = ''; // Clear the books container before rendering new books
+  Books.forEach((book) => {
+    booksContainer.innerHTML += `
         <div id="${book.ID}">
             <p class="book-title">${book.title} <br>${book.author} </p>
             <button class="delete-btn" id="${book.ID}">Remove</button>
         </div>
         <hr>
-        `; 
-    });
+        `;
+  });
 
-    // Add event listeners to the remove buttons after they are rendered
-    const removeBtns = document.querySelectorAll('.delete-btn');
-    removeBtns.forEach( (btn, index) => {
-        btn.addEventListener('click', () => {
-            removeBook( index);
-        });
+  // Add event listeners to the remove buttons after they are rendered
+  const removeBtns = document.querySelectorAll('.delete-btn');
+  removeBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      removeBook(index);
     });
+  });
 }
+
+displayBooks();
+
+addBtn.addEventListener('click', () => {
+  if (titleInput.value !== '' && authorInput.value !== '') {
+    const titleValue = titleInput.value;
+    const authorValue = authorInput.value;
+    const bookID = Books.length;
+    addBook(titleValue, authorValue, bookID);
+  }
+});
