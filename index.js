@@ -1,5 +1,5 @@
-/*eslint-disable no-unused-vars
-eslint-disable max-classes-per-file*/
+/* eslint-disable no-unused-vars */
+/* eslint-disable max-classes-per-file */
 class Book {
   constructor(title, author, id) {
     this.title = title;
@@ -17,17 +17,20 @@ class Library {
     this.displayBooks();
     this.addEventListeners();
   }
+
   addBook(title, author, id) {
     const book = new Book(title, author, id);
     this.books.push(book);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
+
   removeBook(index) {
     this.books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
+
   displayBooks() {
     this.booksContainer.innerHTML = '';
     this.books.forEach((book) => {
@@ -49,6 +52,7 @@ class Library {
       this.booksContainer.appendChild(document.createElement('hr'));
     });
   }
+
   addEventListeners() {
     this.addBtn.addEventListener('click', () => {
       if (this.titleInput.value !== '' && this.authorInput.value !== '') {
