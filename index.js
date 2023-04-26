@@ -10,7 +10,7 @@ let Books = JSON.parse(localStorage.getItem('books')) || [];
 addBtn.addEventListener('click', () => {
   const titleValue = titleInput.value;
   const authorValue = authorInput.value;
-  const bookID = Books.length;
+  const bookID = Date.now();
   addBook(titleValue, authorValue, bookID);
 });
 
