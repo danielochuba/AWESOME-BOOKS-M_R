@@ -1,11 +1,4 @@
-// eslint-disable-next-line max-classes-per-file
-class Book {
-  constructor(title, author, id) {
-    this.title = title;
-    this.author = author;
-    this.id = id;
-  }
-}
+import Book from './bookClass.js';
 
 class Library {
   constructor(container, titleInput, authorInput, addBtn) {
