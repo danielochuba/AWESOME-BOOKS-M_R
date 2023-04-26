@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-classes-per-file */
+// eslint-disable-next-line max-classes-per-file
 class Book {
   constructor(title, author, id) {
     this.title = title;
@@ -7,6 +6,7 @@ class Book {
     this.id = id;
   }
 }
+
 class Library {
   constructor(container, titleInput, authorInput, addBtn) {
     this.booksContainer = document.querySelector(container);
@@ -64,4 +64,6 @@ class Library {
     });
   }
 }
+
 const library = new Library('.books', 'title-input', 'author-input', '.add-btn');
+library.displayBooks();
