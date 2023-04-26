@@ -6,7 +6,6 @@ class Book {
     this.author = author;
     this.id = id;
   }
-
 }
 class Library {
   constructor(container, titleInput, authorInput, addBtn) {
