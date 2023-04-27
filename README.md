@@ -8,7 +8,6 @@
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -32,11 +31,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 [Awesome Book] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
 **[Awesome Book]** is a microverse Project which allows users to ADD books by inputing the Book title and the Book author, and REMOVE books at will.
 
@@ -44,7 +41,6 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -58,11 +54,9 @@
 </details>
 
 
-<!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - **[Add Boks to Library]**
 - **[Delete Books]**
@@ -74,11 +68,9 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 ### Prerequisites
 In order to run this project you need to:
@@ -113,23 +105,12 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Daniel Ochuba**
 
@@ -137,14 +118,17 @@ Example command:
 - Twitter: [@ochuba_daniel](https://twitter.com/ochuba_daniel)
 - LinkedIn: [@daniel_ochuba](www.linkedin.com/in/daniel-ochuba-614572238)
 
+👤 **Ruben Cuervo**
+
+- GitHub: [@jrmcuervo](https://github.com/jrmcuervo)
+- Twitter: [@jrmcuervo](https://twitter.com/jrmcuervo)
+- LinkedIn: [@jrmcuervo](www.linkedin.com/in/jrmcuervo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Button Styles]**
 - [ ] **[Table Display]**
@@ -152,7 +136,6 @@ Example command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -171,10 +154,9 @@ If you like this project you can give me a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
-## 🙏 Acknowledgments <a name="acknowledgements">I would like to thank  Microverse for this opportunity to learn and W3Schools for the information shared in their site.</a>
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+## 🙏 Acknowledgments <a name="acknowledgements"></a><p>I would like to thank  Microverse for this opportunity to learn and W3Schools for the information shared in their site.</p>
+
 
 
 ## 📝 License <a name="license"></a>
