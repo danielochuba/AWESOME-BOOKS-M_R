@@ -13,3 +13,21 @@ listLink.addEventListener('click', () => {
   addNewSection.style.display = 'none';
   contactSection.style.display = 'none';
 });
+
+addNewLink.addEventListener('click', () => {
+  listLink.classList.remove('active');
+  addNewLink.classList.add('active');
+  contactLink.classList.remove('active');
+  listSection.style.display = 'none';
+  addNewSection.style.display = 'block';
+  contactSection.style.display = 'none';
+});
+contactLink.addEventListener('click', () => {
+  listLink.classList.remove('active');
+  addNewLink.classList.remove('active');
+  contactLink.classList.add('active');
+  listSection.style.display = 'none';
+  addNewSection.style.display = 'none';
+  contactSection.style.display = 'block';
+  document.querySelector('.date-time').textContent = Date();
+});

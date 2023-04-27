@@ -14,7 +14,6 @@ body {
   justify-content: center;
 }
 
-
 header {
   height: 50px;
   width: 90%;
@@ -92,14 +91,12 @@ tr:nth-child(odd) {
   width: 200px;
   overflow: hidden;
   height: 17px;
- 
   right: 0;
   margin-right: 5%;
   font-weight: 200;
 }
 
 footer {
-  
   padding: 10px 0 0 10px;
   position: absolute;
   bottom: 10px;
