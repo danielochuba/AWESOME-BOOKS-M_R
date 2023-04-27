@@ -1,12 +1,16 @@
 import Book from './bookClass.js';
 
+document.querySelector('.date-time').textContent = Date();
+
 class Library {
   constructor(container, titleInput, authorInput, addBtn) {
     this.booksContainer = document.querySelector(container);
     this.titleInput = document.getElementById(titleInput);
     this.authorInput = document.getElementById(authorInput);
     this.addBtn = document.querySelector(addBtn);
+
     this.books = JSON.parse(localStorage.getItem('books')) || [];
+
     this.displayBooks();
     this.addEventListeners();
   }
@@ -19,7 +23,7 @@ class Library {
   }
 
   removeBook(index) {
-    this.books.splice(index, 1);
+    this.books = this.books.filter((book) => book.id !== index);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
@@ -27,22 +31,18 @@ class Library {
   displayBooks() {
     this.booksContainer.innerHTML = '';
     this.books.forEach((book) => {
-      const div = document.createElement('div');
-      div.id = book.id;
-      const p = document.createElement('p');
-      p.className = 'book-title';
-      p.innerHTML = `${book.title} <br> ${book.author}`;
-      const btn = document.createElement('button');
-      btn.className = 'delete-btn';
-      btn.innerHTML = 'Remove';
-      btn.id = book.id;
-      btn.addEventListener('click', () => {
-        this.removeBook(this.books.indexOf(book));
+      const row = document.createElement('tr');
+      row.className = 'row';
+      row.innerHTML = `
+        <td class="content"><strong>${book.title}</strong><em> &ensp;by&ensp; </em>  <strong>${book.author}<strong></td> 
+        <td class ="delete" ><button id="${book.id}" class="delete-btn" ><strong class="delete-button">Remove</strong></button></td>
+      `;
+      this.booksContainer.appendChild(row);
+      const removeBtn = row.querySelector('.delete-btn');
+
+      removeBtn.addEventListener('click', () => {
+        this.removeBook(book.id);
       });
-      div.appendChild(p);
-      div.appendChild(btn);
-      this.booksContainer.appendChild(div);
-      this.booksContainer.appendChild(document.createElement('hr'));
     });
   }
 
